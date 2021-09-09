@@ -1,5 +1,7 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Dimensions } from 'react-native';
+
+const windowWidth = Dimensions.get('window').width;
 
 export default () => {
   return (
@@ -24,7 +26,7 @@ const styles = StyleSheet.create({
   rule: {
     backgroundColor: '#A2A2A2',
     height: 2,
-    width: 121
+    width: windowWidth * 0.308
   },
   textBox: {
     marginHorizontal: 20

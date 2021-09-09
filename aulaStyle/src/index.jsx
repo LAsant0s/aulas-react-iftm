@@ -2,11 +2,13 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Header from './components/Header';
 import ProductsList from './components/ProductsList';
+import Divider from './components/Divider';
 
 const LotsOfStyles = () => {
     return (
       <View style={styles.container}>
         <Header />
+        <Divider/>
         <ProductsList />
       </View>
     );

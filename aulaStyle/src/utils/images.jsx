@@ -6,12 +6,12 @@ const lightdecor = require('../../assets/images/05-lightdecor.png');
 const garlands = require('../../assets/images/06-garlands.png');
 
 const images = [
-  { image: tablelamps, name: "Abajur" },
-  { image: ceilinglamps, name: "Lâmpada de teto" },
-  { image: sconces, name: "Arandela" },
-  { image: floorlamps, name: "Luminária de chão" },
-  { image: lightdecor, name: "Luminária de decoração" },
-  { image: garlands, name: "Lampâda à gás" },
+  { id: '1', image: tablelamps, name: "Abajur" },
+  { id: '2', image: ceilinglamps, name: "Lâmpada de teto" },
+  { id: '3', image: sconces, name: "Arandela" },
+  { id: '4', image: floorlamps, name: "Luminária de chão" },
+  { id: '5', image: lightdecor, name: "Luminária de decoração" },
+  { id: '6', image: garlands, name: "Lampâda à gás" },
 ]
 export default images;
 

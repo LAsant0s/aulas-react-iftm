@@ -1,27 +1,22 @@
 import React from 'react';
-import { ScrollView, StyleSheet, View, Image, ImageStore } from 'react-native';
+import { FlatList } from 'react-native';
 import Card from './Card';
 import images from '../utils/images';
 
 export default () => {
+  const renderItem = ({ item }) => (
+    <Card image={item}/>
+  );
+
   return (
-    <ScrollView>
-      <View style={styles.container}>
-        {images.map((image, key) => {
-          return <Card key={key} image={image}/>
-        })}
-      </View>
-    </ScrollView>
+      <FlatList
+        data={images}
+        renderItem={renderItem}
+        keyExtractor={(image) => image.id}
+        numColumns={2}
+        contentContainerStyle={
+          {flex: 1, alignItems: 'center', justifyContent: 'flex-start'}
+        }
+      />
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    display: 'flex',
-    alignItems: 'center',
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'center'
-  }
-})

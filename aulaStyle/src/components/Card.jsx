@@ -1,11 +1,16 @@
 import React from 'react';
+import { Dimensions } from 'react-native';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
+
 export default ({ image }) => {
+
   return (
     <TouchableOpacity style={styles.button}>
       <View style={styles.card}>
-        <Image source={image.image} style={styles.cardImage}/>
+        <Image source={image.image} resizeMode='contain' style={styles.cardImage}/>
         <Text style={styles.cardText}>
           {image.name} 
         </Text>
@@ -16,8 +21,8 @@ export default ({ image }) => {
 
 const styles = StyleSheet.create({
   card: {
-    width: 167,
-    height: 180,
+    width: windowWidth * 0.42,
+    height: windowHeight * 0.23,
     margin: 10,
     borderRadius: 8,
     backgroundColor: 'white',
@@ -31,7 +36,8 @@ const styles = StyleSheet.create({
   },
   cardText: {
     marginTop: 5,
-    color: '#A2A2A2'
+    color: '#A2A2A2',
+    fontSize: windowWidth * 0.035
   },
   button: {
     alignItems: "center",

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Image, StyleSheet, View, Text, TouchableOpacity, TouchableOpacityBase } from 'react-native';
-import Divider from './Divider';
 
 export default () => {
   const img = require('../../assets/images/bag.png');
@@ -15,7 +14,6 @@ export default () => {
           </View>
         </TouchableOpacity>
       </View>
-      <Divider/>
     </>
   )
 }
