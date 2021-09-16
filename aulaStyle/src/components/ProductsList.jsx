@@ -3,9 +3,9 @@ import { FlatList } from 'react-native';
 import Card from './Card';
 import images from '../utils/images';
 
-export default () => {
+export default ({ navigation }) => {
   const renderItem = ({ item }) => (
-    <Card image={item}/>
+    <Card image={item} navigation={navigation} />
   );
 
   return (

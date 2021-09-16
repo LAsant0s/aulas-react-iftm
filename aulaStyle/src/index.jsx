@@ -1,15 +1,15 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import Header from './components/Header';
 import ProductsList from './components/ProductsList';
 import Divider from './components/Divider';
 
-const LotsOfStyles = () => {
+const LotsOfStyles = ({ navigation }) => {
     return (
       <View style={styles.container}>
         <Header />
         <Divider/>
-        <ProductsList />
+        <ProductsList navigation={navigation} />
       </View>
     );
 };

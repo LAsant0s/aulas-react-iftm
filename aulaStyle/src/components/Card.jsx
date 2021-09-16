@@ -5,10 +5,13 @@ import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
-export default ({ image }) => {
+export default ({ image, navigation }) => {
 
   return (
-    <TouchableOpacity style={styles.button}>
+    <TouchableOpacity 
+    style={styles.button}
+    onPress={() => navigation.navigate('Detalhes', { image })}
+    >
       <View style={styles.card}>
         <Image source={image.image} resizeMode='contain' style={styles.cardImage}/>
         <Text style={styles.cardText}>
